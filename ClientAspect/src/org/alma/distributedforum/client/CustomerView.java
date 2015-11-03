@@ -12,6 +12,6 @@ public class CustomerView extends UnicastRemoteObject implements ICustomerView,S
 	}
 
 	public void show(String message) throws RemoteException {
-		System.out.println(message);
+		System.out.println("Received: " + message);
 	}
 }

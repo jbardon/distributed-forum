@@ -31,7 +31,7 @@ public class Subject extends UnicastRemoteObject implements ISubject,Serializabl
 
 	public void broadcast(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("broadcast");
+		System.out.println("-> broadcast");
 		for (ICustomerView view : viewers) {
 			try {
 				view.show(message);
@@ -44,14 +44,14 @@ public class Subject extends UnicastRemoteObject implements ISubject,Serializabl
 	@Override
 	public boolean subscription(ICustomerView view) throws RemoteException {
 		// TODO Auto-generated method stub
-		System.out.println("Subcribe");
+		System.out.println("-> Subcribe");
 		return viewers.add(view);
 	}
 
 	@Override
 	public boolean unsubscribe(ICustomerView view) throws RemoteException {
 		// TODO Auto-generated method stub
-		System.out.println("UnSubcribe");
+		System.out.println("-> UnSubcribe");
 		return viewers.remove(view);
 	}
 

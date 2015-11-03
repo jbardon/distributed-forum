@@ -29,10 +29,11 @@ public class Client {
 
       subject.putMessage("Hello");
 
-      subject.unsubscribe(myView);
+     // subject.unsubscribe(myView);
 
       subject.putMessage("wold!");
-
+      subject.putMessage("totot");
+      
       UnicastRemoteObject.unexportObject(myView, true);
 
     } catch (Exception e) {
